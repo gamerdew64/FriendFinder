@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder - Survey Page</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+
+  <!-- Custom Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+  <!-- Chosen -->
+  <!-- This is a JQuery plugin that we have not yet discussed, but some of the training materials mentined that it would be good to look into it and start implementing it. This will change what the selections look like for the end user -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
+  <!-- Link to CSS file for custom styling - no bootstrap -->
+  <!-- This custom CSS doesn't currently work, and I think it has to do with what was described here: -->
+  <!-- https://teamtreehouse.com/community/cant-get-the-css-to-load-in-the-nodejs-server -->
+  <!-- This will be something to consider for version 2.0 -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center"><i class="fa fa-wpforms" aria-hidden="true"></i> Survey Questions</h2>
+    <hr>
+
+    <!-- Enter Name Section -->
+    <h3><strong>About You</strong></h3>
+    <h3>Name (Required)</h3>
+    <input type="text" name="" id="name" class="form-control" required>
+
+    <!-- Enter Link to Photo Section -->
+    <h3>Link to Photo Image (Required)</h3>
+    <input type="text" name="" id="photo" class="form-control" required>
+    <hr>
+
+    <!-- The questions that the end user must answer -->
+    <h3><strong>Question 1</strong></h3>
+    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_1">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 2</strong></h3>
+    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_2">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 3</strong></h3>
+    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_3">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 4</strong></h3>
+    <h4>You rarely do something just out of sheer curiosity.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_4">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 5</strong></h3>
+    <h4>People can rarely upset you.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_5">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 6</strong></h3>
+    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_6">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 7</strong></h3>
+    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_7">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 8</strong></h3>
+    <h4>You rarely get carried away by fantasies and ideas.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_8">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 9</strong></h3>
+    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_9">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 10</strong></h3>
+    <h4>You feel more energetic after spending time with a group of people.</h4>
+    <!-- Chosen automatically sets the default field text to "Choose an Option..." by reading the select element's data-placeholder value. -->
+    <select data-placeholder="Choose an Option..." class="chosen-select" id="question_10">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2 (Somewhat Disagree)</option>
+      <option value="3">3 (Indifferent)</option>
+      <option value="4">4 (Somewhat Agree)</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <br>
+    <br>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-share-square" aria-hidden="true"></i> Submit</button>
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/gamerdew64/FriendFinder">GitHub Repo Link</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal Section -->
+  <div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Your Best Match!</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="matchName"></h2>
+          <!-- Placeholder modal image -->
+          <img id="matchImg" src="https://m.media-amazon.com/images/M/MV5BMjQ0MTE1NDAwNl5BMl5BanBnXkFtZTYwNzMxMDE5._V1_.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close Window</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+
+  // ===============================================================================
+  // Chosen CSS --- https://harvesthq.github.io/chosen/
+  // ===============================================================================
+
+  // Creating a new variable "config" object that contains several diffent custome styling options
+  var config = {
+    ".chosen-select": {},
+    // When a single select box isn't a required field, you can set allow_single_deselect: true
+    //Chosen adds a UI element for option deselection. This will only work if the first option has blank text.
+    ".chosen-select-deselect": { allow_single_deselect:true },
+    // The disable_search_threshold option can be specified to hide the search input on single selects if there are 10 or fewer options.
+    ".chosen-select-no-single": { disable_search_threshold:10 },
+    // Setting the "No results" search text as "Sorry, no results found!"
+    ".chosen-select-no-results": { no_results_text: "Sorry, no results found!"},
+    // Width of the drop down menu
+    ".chosen-select-width": { width: "95%" }
+  };
+
+  for (var selector in config) {
+    $(selector).chosen(config[selector]);
+  }
+
+  // Capturing the inputs from the form when the user clicks the submit button
+  $("#submit").on("click", function()
+  {
+    // Form validation
+    function validateForm()
+    {
+      var isValid = true;
+      $(".form-control").each(function()
+      {
+        if ($(this).val() === "")
+        {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+  // If the form has successfully validated, do the following:
+  if (validateForm())
+  {
+    // Creating new userData object that collects the information from the user
+    var userData =
+    {
+      name: $("#name").val(),
+      photo: $("#photo").val(),
+      scores: [
+        $("#question_1").val(),
+        $("#question_2").val(),
+        $("#question_3").val(),
+        $("#question_4").val(),
+        $("#question_5").val(),
+        $("#question_6").val(),
+        $("#question_7").val(),
+        $("#question_8").val(),
+        $("#question_9").val(),
+        $("#question_10").val()
+      ]
+    };
+
+    // Collecting the URL from the website
+    var currentURL = window.location.origin;
+
+    // AJAX post the data to the friends API.
+    $.post(currentURL + "/api/friends", userData, function(data)
+    {
+
+    // Collecting the result from the AJAX post so that the best match's name and photo are displayed (in their own window)
+    $('#matchName').html(data.matchingUserName);
+    $("#matchImg").attr("src", data.matchingUserImg);
+
+    // Showing the modal with the best matches
+    $("#resultsModal").modal("toggle");
+
+    // This was added for testing purposes, to make sure that the click action was doing what it wasa supposed to do. If it is uncommmented, it breaks the logic and doesn't show the user information (but we can console log it). I am going to comment this out for this reason.
+
+    // alert("Hooray, it's working! You were added into the array! WHY AREN'T YOU MORE EXCITED?");
+
+    });
+  }
+
+  // If the user didn't answer all of the required questions, this message will display:
+  else
+  {
+    alert("Please fill out all the (required) fields before clicking submit!!!");
+  }
+  return false;
+  });
+
+</script>
+</html>
