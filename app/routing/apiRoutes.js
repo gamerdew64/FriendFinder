@@ -67,9 +67,19 @@ module.exports = function(app) {
 
     // If the questionDifference is less than the totalDifference, display the friend match (difference number, friend name and friend image) to the console.
     if (questionDifference < totalDifference) {
-      console.log('Closest match found = ' + questionDifference);
-      console.log('Friend name = ' + friends[i].name);
-      console.log('Friend image = ' + friends[i].photo);
+      // console.log('Closest matching total = ' + questionDifference);
+      // console.log('Friend name = ' + friends[i].name);
+      // console.log('Friend image = ' + friends[i].photo);
+
+      // Commented out the above three lines because of the styling that I added below. Outside of the styling, the console logs are identical.
+      console.log("\x1b[1m","\x1b[30m","-------------------------------------------------\n" + "\x1b[35m","Closest" +"\x1b[34m","matching" + "\x1b[33m","total" + "\x1b[32m",":" + "\x1b[1m","\x1b[31m", questionDifference + "\x1b[30m","\n-------------------------------------------------\n");
+
+      console.log("\x1b[1m","\x1b[30m","\n-------------------------------------------------\n" + "\x1b[34m","Friend" +"\x1b[33m","Name" + "\x1b[32m",":" + "\x1b[31m",friends[i].name + "\x1b[30m","\n-------------------------------------------------\n");
+
+      console.log("\x1b[1m","\x1b[30m","\n-------------------------------------------------\n" + "\x1b[33m","Friend" +"\x1b[32m","Photo" + "\x1b[31m",":" + "\x1b[36m",friends[i].photo + "\x1b[30m","\n-------------------------------------------------\n");
+
+      // Resetting console formatting to default
+      console.log("\x1b[0m");
 
       // Assigning the matchingUserName to the name property for every friends index in the array. This will be referenced when we print the information to the end user on the survey.html page.
       matchingUserName = friends[i].name;
