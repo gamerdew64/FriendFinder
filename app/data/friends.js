@@ -3,6 +3,7 @@
 // Below data will hold all of the pre-collected possible matches.
 // ===============================================================================
 
+// This is an array full of 8 different Office Space characters. Each character has their own object, and each object contains their name, photo, and scores.
 var friends = [
   {
     "name":"Peter Gibbons",
@@ -53,22 +54,6 @@ var friends = [
       ]
   },
   {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-        1,
-        3,
-        5,
-        2,
-        4,
-        1,
-        3,
-        5,
-        2,
-        4
-      ]
-  },
-  {
     "name":"Bill Lumbergh",
     "photo":"https://static.tvtropes.org/pmwiki/pub/images/screen_shot_2017_08_02_at_93535_am.png",
     "scores":[
@@ -85,7 +70,7 @@ var friends = [
       ]
   },
   {
-    "name":"Joanna ",
+    "name":"Joanna",
     "photo":"https://static.tvtropes.org/pmwiki/pub/images/screen_shot_2017_08_05_at_15740_pm.png",
     "scores":[
         1,
@@ -150,5 +135,5 @@ var friends = [
   }
 ];
 
-// Note how we export the array. This makes it accessible to other files using require.
+// Exporting the array. This makes it accessible to other files using require.
 module.exports = friends;
